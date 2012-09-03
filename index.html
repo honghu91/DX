@@ -1,0 +1,28 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+  <script type="text/javascript" src="js/dx.js"></script>
+</head>
+<body>
+
+<script type="text/javascript">
+function A(){
+  setTimeout(function(){
+      alert("A");
+  },400);
+}
+function B(){
+  setTimeout(function(){alert("B");},200);
+}
+function C(){
+  setTimeout(function(){alert("C");},10);
+}
+//A();B();C();
+//Timing("A->B->C");
+Timing("B->A->C");
+//Timing("C->B->A");
+</script>
+</body>
+</html>
