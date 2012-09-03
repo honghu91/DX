@@ -1,0 +1,26 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+</head>
+<body>
+<script type="text/javascript">
+Function.prototype.addObserver = function(){
+}
+function A(){
+  this.h = setTimeout(function(){alert('A Comeout')},300);
+}
+function B(){
+  WaitingFor("A.h");
+  alert("B Comeout");
+}
+function WaitingFor(funcStr){
+  var funcArr = funcStr.split(".");
+  var mainFunc = eval(funcArr[0]);
+  mainFunc.addObserver();
+}
+B();A();
+</script>	
+</body>
+</html>
